@@ -2,13 +2,12 @@
     Youtube Live News Kodi Addon
     ~~~~~~~~~~~~~~~~~~~~~~~
 
-    :copyright: (c) 2013 by Jonathan Beluch
+    :copyright: (c) 2013 by William Luke
     :license: GPLv3, see LICENSE.txt for more details.
 '''
 import xbmcswift2
 from xbmcswift2 import xbmc
 import requests
-import json
 
 ONE_HOUR_IN_MINUTES = 60
 YOUTUBE_URL = 'plugin://plugin.video.youtube/?action=play_video&videoid=%s'
@@ -85,7 +84,6 @@ def logger(message):
 
 
 def to_listitem(item):
-
     return {
         'label': item['title'],
         'path': get_playable_url(item['title']),
